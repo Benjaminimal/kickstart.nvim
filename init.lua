@@ -8,7 +8,7 @@
 - review `:Tutor` at some point
 - run AND READ `:help`.
 - make <leader>c aware of splits
-- store location of curser when clsosing file
+- autopairs
 
 --]]
 
@@ -148,6 +148,8 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
+  'farmergreg/vim-lastplace', -- Restore cursor position when opening files
+
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
