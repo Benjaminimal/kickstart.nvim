@@ -7,7 +7,6 @@
 
 - review `:Tutor` at some point
 - run AND READ `:help`.
-- tabline
 - [] navigation
 
 --]]
@@ -777,6 +776,9 @@ require('lazy').setup({
       -- Don't close split when deleting buffer
       require('mini.bufremove').setup()
       vim.keymap.set('n', '<leader>fc', require('mini.bufremove').delete, { desc = '[F]ile [C]lose' })
+
+      -- Simple and easy tabline.
+      require('mini.tabline').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
