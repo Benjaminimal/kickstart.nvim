@@ -7,7 +7,9 @@
 
 - review `:Tutor` at some point
 - run AND READ `:help`.
-- [] navigation
+- read help on quickfix
+- read help on location list
+- naviagte to git hunks
 
 --]]
 
@@ -758,6 +760,9 @@ require('lazy').setup({
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
+      -- Go forward/backward with square brackets
+      require('mini.bracketed').setup()
+
       -- Better Around/Inside textobjects
       --
       -- Examples:
