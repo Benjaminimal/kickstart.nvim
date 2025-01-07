@@ -7,7 +7,9 @@
 
 - review `:Tutor` at some point
 - run AND READ `:help`.
-- make <leader>c aware of splits
+- tabline
+- [] navigation
+- sane autocompletion (no more c-y)
 
 --]]
 
@@ -85,7 +87,6 @@ vim.opt.scrolloff = 3
 -- Make saving and closing files easier
 vim.keymap.set('n', '<leader>fq', ':q<CR>', { desc = '[F]ile [Q]it' })
 vim.keymap.set('n', '<leader>fw', ':w<CR>', { desc = '[F]ile [W]rite' })
-vim.keymap.set('n', '<leader>fc', ':bd<CR>', { desc = '[F]ile [C]lose' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -772,6 +773,10 @@ require('lazy').setup({
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+
+      -- Don't close split when deleting buffer
+      require('mini.bufremove').setup()
+      vim.keymap.set('n', '<leader>fc', require('mini.bufremove').delete, { desc = '[F]ile [C]lose' })
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
