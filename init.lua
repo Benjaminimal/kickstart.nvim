@@ -8,7 +8,7 @@
 - review `:Tutor` at some point
 - run AND READ `:help`.
 - make <leader>c aware of splits
-- autopairs
+- redo existing keymaps
 
 --]]
 
@@ -842,7 +842,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
