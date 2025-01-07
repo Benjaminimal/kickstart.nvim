@@ -86,7 +86,9 @@ vim.opt.scrolloff = 3
 
 -- Make saving and closing files easier
 vim.keymap.set('n', '<leader>fq', ':q<CR>', { desc = '[F]ile [Q]it' })
+vim.keymap.set('n', '<leader>fQ', ':qa<CR>', { desc = '[F]ile [Q]it all' })
 vim.keymap.set('n', '<leader>fw', ':w<CR>', { desc = '[F]ile [W]rite' })
+vim.keymap.set('n', '<leader>fW', ':wq<CR>', { desc = '[F]ile [W]rite & quit' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
